@@ -1,0 +1,17 @@
+<div style="font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 25px; border: 1px solid #e2e8f0; border-radius: 10px; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+  <h2 style="color: #2563eb; margin-top: 0; margin-bottom: 5px;">Clasificador de Reportes 311</h2>
+  <p style="font-size: 13px; color: #64748b; margin-top: 0; margin-bottom: 20px;">Proyecto Integrador - Equipo 4</p>
+  
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #334155; font-size: 14px;">Descripción del reporte ciudadano:</label>
+    <textarea [(ngModel)]="textoReporte" rows="4" placeholder="Ej. Hay un carro tapando la salida..." style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 14px;"></textarea>
+  </div>
+
+  <button (click)="clasificar()" style="width: 100%; background: #2563eb; color: white; padding: 12px; border: none; border-radius: 6px; font-weight: bold; font-size: 15px; cursor: pointer;">Clasificar Reporte</button>
+
+  <div *ngIf="resultadoMostrado" style="margin-top: 20px; padding: 15px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px;">
+    <h3 style="color: #1e40af; margin-top: 0; margin-bottom: 10px;">Resultado del Sistema:</h3>
+    <p><strong>Categoría:</strong> <span style="color: #1d4ed8;">{{ categoria }}</span></p>
+    <p><strong>Dependencia:</strong> <span style="color: #1d4ed8;">{{ agencia }}</span></p>
+  </div>
+</div>
